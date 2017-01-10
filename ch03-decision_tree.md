@@ -75,5 +75,3 @@ ID3 알고리즘을 요약하면 다음과 같다.(더 많은 정보는 (http://
 ![equation](https://latex.codecogs.com/gif.latex?H%20%3D%20-%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20p%28x_i%29%20log_2%20p%28x_i%29)  
 
 ![](https://latex.codecogs.com/gif.latex?n)은 분류 항목의 개수이다.
-
-

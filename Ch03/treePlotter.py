@@ -3,6 +3,13 @@ Created on Oct 14, 2010
 
 @author: Peter Harrington
 '''
+
+'''
+Add Jan 10, 2017
+Convert from python 2 to python 3
+Korean Comments
+@author: Yedarm Seong <mybirth0407@gmail.com>
+'''
 import matplotlib.pyplot as plt
 
 # 플롯할 상자와 화살표 형태를 정의한다.
