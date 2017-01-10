@@ -17,6 +17,7 @@ Output:
 '''
 Add Jan 05, 2017
 Convert from python 2 to python 3
+Korean Comments
 @author: Yedarm Seong <mybirth0407@gmail.com>
 '''
 
@@ -35,12 +36,12 @@ k: 선택할 최근접 이웃의 수
 def classify0(inX, dataSet, labels, k):
     # dataSet의 행의 크기
     dataSetSize = dataSet.shape[0]
-    # inX를 행렬로 변환
+    # inX를 행렬로 변환한다.
     diffMat = tile(inX, (dataSetSize, 1)) - dataSet
     sqDiffMat = diffMat ** 2
     sqDistances = sqDiffMat.sum(axis=1)
     distances = sqDistances ** 0.5
-    # numpy.argsort(): 정렬된 후의 인덱스를 반환
+    # numpy.argsort(): 정렬된 후의 인덱스를 반환한다.
     # 예) a = [1.48, 1.41, 0, 0.1], b = a.argsort()
     # b = [2, 3, 1, 0]
     # for x in b: a[x] = [0, 0.1, 1.41, 1.48]
@@ -55,10 +56,11 @@ def classify0(inX, dataSet, labels, k):
     # sortedClassCount = sorted(
     #     classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
 
-    # itemgetter(1): 사전의 값을 기준으로 정렬,
-    # itemgetter(0): 사전의 키를 기준으로 정렬
+    # itemgetter(1): 사전의 값을 기준으로 정렬한다.
+    # itemgetter(0): 사전의 키를 기준으로 정렬한다.
     sortedClassCount = sorted(
-        classCount.items(), key=operator.itemgetter(1), reverse=True)
+        classCount.items(), key=operator.itemgetter(1), reverse=True
+    )
     return sortedClassCount[0][0]
 
 
@@ -137,7 +139,8 @@ def datingClassTest():
         # k-NN 알고리즘을 수행하여 분류한다.
         classifierResult = classify0(
             normMat[i, :], normMat[numTestVecs:m, :],
-            datingLabels[numTestVecs:m], 3)
+            datingLabels[numTestVecs:m], 3
+        )
 
         print("the classifier came back with: %d, the real answer is: %d" %
               (classifierResult, datingLabels[i]))
@@ -157,15 +160,15 @@ def classifyPerson():
     # ffMiles = float(raw_input("frequent flier miles earned per year?"))
     # iceCream = float(raw_input("liters of ice cream consumed per year?"))
 
-    percentTats = float(input(
-        "percentage of time spent playing video games?"))
+    percentTats = float(input("percentage of time spent playing video games?"))
     ffMiles = float(input("frequent flier miles earned per year?"))
     iceCream = float(input("liters of ice cream consumed per year?"))
     datingDataMat, datingLabels = file2matrix('datingTestSet2.txt')
     normMat, ranges, minVals = autoNorm(datingDataMat)
     inArr = array([ffMiles, percentTats, iceCream, ])
-    classifierResult = classify0((inArr - minVals)
-                                 / ranges, normMat, datingLabels, 3)
+    classifierResult = classify0(
+        (inArr - minVals) / ranges, normMat, datingLabels, 3
+    )
 
     print("You will probably like this person: %s" %
           resultList[classifierResult - 1])
