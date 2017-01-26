@@ -5,7 +5,7 @@ Logistic Regression Working Module
 '''
 
 '''
-Add Jan 10, 2017
+Add Jan 14, 2017
 Convert from python 2 to python 3
 Korean Comments
 @author: Yedarm Seong <mybirth0407@gmail.com>
