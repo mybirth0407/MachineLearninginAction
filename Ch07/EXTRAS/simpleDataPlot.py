@@ -1,8 +1,8 @@
-'''
+"""
 Created on Dec 13, 2010
 
 @author: Peter
-'''
+"""
 from numpy import *
 import matplotlib
 import matplotlib.pyplot as plt

@@ -1,15 +1,15 @@
-'''
+"""
 Created on Oct 19, 2010
 
 @author: Peter
-'''
+"""
 
-'''
+"""
 Add Jan 12, 2017
 Convert from python 2 to python 3
 Korean Comments
 @author: Yedarm Seong <mybirth0407@gmail.com>
-'''
+"""
 from numpy import *
 from commons import *
 

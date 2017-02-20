@@ -1,4 +1,4 @@
-'''
+"""
 Created on Sep 16, 2010
 kNN: k Nearest Neighbors
 
@@ -12,14 +12,14 @@ Output:
     the most popular class label
 
 @author: pbharrin
-'''
+"""
 
-'''
+"""
 Add Jan 05, 2017
 Convert from python 2 to python 3
 Korean Comments
 @author: Yedarm Seong <mybirth0407@gmail.com>
-'''
+"""
 
 from numpy import *
 import operator
@@ -27,12 +27,12 @@ from os import listdir
 from commons import *
 
 
-'''
+"""
 inX: 분류할 데이터
 dataSet: 기존 데이터
 labels: 기존 데이터의 라벨
 k: 선택할 최근접 이웃의 수
-'''
+"""
 def classify0(inX, dataSet, labels, k):
     # dataSet의 행의 크기
     dataSetSize = dataSet.shape[0]

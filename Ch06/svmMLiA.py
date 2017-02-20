@@ -1,19 +1,20 @@
-'''
+"""
 Created on Nov 4, 2010
 Chapter 5 source file for Machine Learing in Action
 @author: Peter
-'''
-'''
+"""
+"""
 Add Jan 18, 2017
 Convert from python 2 to python 3
 Korean Comments
 @author: Yedarm Seong <mybirth0407@gmail.com>
-'''
+"""
 
 from numpy import *
 from time import sleep
 
 
+# 파일로부터 데이터 집합을 생성한다.
 def loadDataSet(fileName):
     dataMat = []
     labelMat = []
@@ -25,13 +26,16 @@ def loadDataSet(fileName):
     return dataMat, labelMat
 
 
+# 0 ~ m까지의 범위에서 i가 아닌 다른 값을 반환한다.
 def selectJrand(i, m):
-    j = i  # we want to select any J not equal to i
+    j = i
+    # j와 i가 다른 값을 가질 때까지 반복한다.
     while (j == i):
         j = int(random.uniform(0, m))
     return j
 
 
+# alpha값이 H보다 크거나 L보다 작을 경우 더 커지거나 작아지지 않도록 고정한다.
 def clipAlpha(aj, H, L):
     if aj > H:
         aj = H
@@ -40,6 +44,13 @@ def clipAlpha(aj, H, L):
     return aj
 
 
+"""
+dataMatIn: 데이터 집합
+classLabels: 분류 항목 표시
+C: 상수
+toler: 오차 범위
+maxIter: 최대 반복 횟수
+"""
 def smoSimple(dataMatIn, classLabels, C, toler, maxIter):
     dataMatrix = mat(dataMatIn)
     labelMat = mat(classLabels).transpose()
@@ -417,9 +428,9 @@ def testDigits(kTup=('rbf', 10)):
     print("the test error rate is: %f" % (float(errorCount) / m))
 
 
-'''
+"""
 Non-Kernel Versions below
-'''
+"""
 
 class optStructK:
     # Initialize the structure with the parameters

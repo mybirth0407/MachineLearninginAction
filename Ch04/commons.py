@@ -1,9 +1,9 @@
-'''
+"""
 Created on Sep 16, 2010
 unzip and remove directory method
 
 @author: Yedarm Seong <mybirth0407@gmail.com>
-'''
+"""
 
 def unzip(source_file):
     import zipfile

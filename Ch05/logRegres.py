@@ -1,15 +1,15 @@
-'''
+"""
 Created on Oct 27, 2010
 Logistic Regression Working Module
 @author: Peter
-'''
+"""
 
-'''
+"""
 Add Jan 14, 2017
 Convert from python 2 to python 3
 Korean Comments
 @author: Yedarm Seong <mybirth0407@gmail.com>
-'''
+"""
 
 from numpy import *
 

@@ -1,8 +1,8 @@
-'''
+"""
 Created on Oct 28, 2010
 
 @author: Peter
-'''
+"""
 import matplotlib
 import numpy as np
 import matplotlib.cm as cm
