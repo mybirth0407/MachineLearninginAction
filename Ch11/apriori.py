@@ -39,7 +39,8 @@ def scanD(D, Ck, minSupport):
                 if not can in ssCnt: ssCnt[can] = 1
                 else: ssCnt[can] += 1
     # numItems보단 numTransactions가 더 적절하다.
-    numItems = float(len(D))
+    # numItems = float(len(D))
+    numTransactions = float(len(D))
 
     retList = []
     supportData = {}
